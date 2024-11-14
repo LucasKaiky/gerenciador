@@ -1,7 +1,13 @@
 from pathlib import Path
 import os
+import dj_database_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATABASES = {
+    'default': dj_database_url.config(default=f'sqlite:///{BASE_DIR}/db.sqlite3')
+}
 
 SECRET_KEY = 'django-insecure-l!k(esc&8)c3d-93*u=-ieq4$yr2em)13hquzi4keuef#sk$(g'
 
@@ -11,7 +17,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEBUG = False
 
-ALLOWED_HOSTS = []
+CSRF_TRUSTED_ORIGINS = [
+    'https://web-production-d9c3.up.railway.app',
+    'http://web-production-d9c3.up.railway.app'
+]
+
+SECURE_SSL_REDIRECT = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
+ALLOWED_HOSTS = ['web-production-d9c3.up.railway.app']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -67,13 +82,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'gerenciador.wsgi.application'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
