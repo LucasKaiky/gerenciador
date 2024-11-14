@@ -11,7 +11,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['web-production-d9c3.up.railway.app']
+ALLOWED_HOSTS = ['web-production-d9c3.up.railway.app', '127.0.0.1:8000']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d9c3.up.railway.app',
