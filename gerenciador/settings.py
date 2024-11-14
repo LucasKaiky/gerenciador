@@ -1,7 +1,13 @@
 from pathlib import Path
 import os
+import dj_database_url
+
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+DATABASES = {
+    'default': dj_database_url.config(default=f'sqlite:///{BASE_DIR}/db.sqlite3')
+}
 
 SECRET_KEY = 'django-insecure-l!k(esc&8)c3d-93*u=-ieq4$yr2em)13hquzi4keuef#sk$(g'
 
@@ -76,13 +82,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'gerenciador.wsgi.application'
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 AUTH_PASSWORD_VALIDATORS = [
     {
