@@ -9,7 +9,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['web-production-d9c3.up.railway.app', '127.0.0.1:8000']
 
