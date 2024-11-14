@@ -11,6 +11,12 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEBUG = False
 
+CSRF_TRUSTED_ORIGINS = ['https://web-production-d9c3.up.railway.app']
+
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+
 ALLOWED_HOSTS = ['web-production-d9c3.up.railway.app']
 
 INSTALLED_APPS = [
