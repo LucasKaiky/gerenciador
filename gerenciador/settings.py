@@ -9,7 +9,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-DEBUG = True
+DEBUG = False
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d9c3.up.railway.app',
