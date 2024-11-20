@@ -1,0 +1,70 @@
+.task-dashboard {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+button {
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 3px;
+}
+
+.botoesAcao{
+    display: flex;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.modal {
+    background-color: #242424;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    border-radius: 8px;
+}
+
+.modal h3 {
+    margin-top: 0;
+}
+
+.modal button {
+    margin-top: 10px;
+}
